@@ -522,6 +522,10 @@ kbd{
 .apy-logo{display:block;width:min(100%,210px);height:auto;margin:0 auto 14px;background:#fff;border-radius:14px;padding:8px;box-shadow:0 8px 20px rgba(0,0,0,.12)}
 .hero-logo{display:block;width:min(100%,250px);height:auto;margin:0 auto 16px;background:#fff;border-radius:18px;padding:10px;box-shadow:0 10px 25px rgba(14,63,104,.10)}
 @media (max-width:780px){.apy-logo{width:150px;margin:8px 0 12px}.hero-logo{width:190px}}
+/* Chemin d’accès agrandi pour une lecture confortable */
+#course .path-example{font-size:19px;line-height:1.9;padding:28px 30px;min-height:160px;white-space:normal;overflow-wrap:anywhere;border:2px solid #244e68;box-shadow:0 10px 24px rgba(0,0,0,.14)}
+#course .lesson:nth-of-type(2) .course-grid{grid-template-columns:1fr 1.3fr}
+@media(max-width:1050px){#course .lesson:nth-of-type(2) .course-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -553,7 +557,7 @@ kbd{
         <div>
           <div class="eyebrow">CADGA • Classement numérique</div>
           <h1>Comprendre et utiliser une arborescence</h1>
-          <p class="lead">Apprenez à repérer un dossier, un sous-dossier et un chemin d’accès, puis entraînez-vous à classer de vrais types de fichiers dans une arborescence professionnelle.</p>
+          <p class="lead">Apprenez à repérer un dossier, un sous-dossier et un chemin d’accès, puis entraînez-vous à classer des fichiers dans l’arborescence SERVICES APY présentée à l’accueil.</p>
         </div>
         <div class="pill">100 % hors connexion</div>
       </div>
@@ -563,7 +567,7 @@ kbd{
           <div>
             <div class="eyebrow">Situation professionnelle</div>
             <h2>Au Plaisir des Yeux range ses documents</h2>
-            <p class="lead" style="font-size:16px">Vous travaillez à l’accueil administratif de l’enseigne. De nombreux fichiers liés aux clients, fournisseurs, ventes, ressources humaines et actions commerciales ont été déposés dans un dossier temporaire. Votre mission : comprendre l’organisation numérique de l’entreprise et ranger chaque élément au bon endroit.</p>
+            <p class="lead" style="font-size:16px">Vous travaillez à l’accueil administratif de l’enseigne. De nombreux fichiers liés au cabinet médical, aux services, aux achats et aux factures de vente ont été déposés dans un dossier temporaire. Votre mission : comprendre l’organisation numérique de l’entreprise et ranger chaque élément au bon endroit.</p>
             <div class="cta-row">
               <button class="btn btn-primary" onclick="go('course')">Commencer le cours →</button>
               <button class="btn btn-secondary" onclick="go('training')">Aller à l’entraînement</button>
@@ -575,18 +579,15 @@ kbd{
             <div class="mock-window" aria-label="Aperçu d'une arborescence">
               <div class="mock-toolbar">
                 <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                <span class="mock-path">Ce PC › Documents › Au_Plaisir_des_Yeux</span>
+                <span class="mock-path">Ce PC › Commun › SERVICES APY</span>
               </div>
               <div class="mock-body tree-mini">
-                <div class="root">💻 Au_Plaisir_des_Yeux</div>
-                <div>📁 01_CLIENTS</div>
-                <div style="padding-left:38px">📁 COMMANDES</div>
-                <div style="padding-left:38px">📁 FACTURES</div>
-                <div>📁 02_FOURNISSEURS</div>
-                <div>📁 03_RH</div>
-                <div>📁 04_COMMUNICATION</div>
-                <div style="padding-left:38px">🖼️ IMAGES</div>
-              </div>
+                <div class="root">💻 SERVICES APY</div>
+                <div>📁 CABINET MEDICAL</div>
+                <div>📁 DIAPORAMA DES SERVICES</div>
+                <div>📁 SERVICE ACHAT</div>
+                <div>📁 SERVICE COMMUNICATION</div><div>📁 SERVICE VENTE</div>
+                </div>
             </div>
             </div>
           </div>
@@ -618,12 +619,12 @@ kbd{
           <div class="card">
             <div class="icon">🗂️</div>
             <h3>Dossier racine</h3>
-            <p>C’est le dossier principal. Dans notre cas : <strong>Au_Plaisir_des_Yeux</strong>.</p>
+            <p>C’est le dossier principal. Dans notre cas : <strong>SERVICES APY</strong>.</p>
           </div>
           <div class="card">
             <div class="icon">📁</div>
             <h3>Dossier / sous-dossier</h3>
-            <p>Un dossier peut contenir d’autres dossiers. Exemple : <strong>01_CLIENTS › FACTURES</strong>.</p>
+            <p>Un dossier peut contenir d’autres dossiers. Exemple : <strong>SERVICE ACHAT › CATALOGUE FOURNISSEURS</strong>.</p>
           </div>
           <div class="card">
             <div class="icon">📄</div>
@@ -643,22 +644,24 @@ kbd{
         <div class="course-grid">
           <div>
             <div class="example-tree">
-              <div>💻 <strong>Au_Plaisir_des_Yeux</strong></div>
-              <div class="indent1">📁 01_CLIENTS</div>
-              <div class="indent2">📁 COMMANDES</div>
-              <div class="indent2">📁 FACTURES</div>
-              <div class="indent2">📁 RECLAMATIONS</div>
-              <div class="indent1">📁 02_FOURNISSEURS</div>
-              <div class="indent2">📁 DEVIS</div>
-              <div class="indent2">📁 FACTURES</div>
-              <div class="indent1">📁 03_RH</div>
-              <div class="indent2">📁 CONTRATS</div>
-              <div class="indent2">📁 PLANNINGS</div>
+              <div>💻 <strong>SERVICES APY</strong></div>
+              <div class="indent1">📁 CABINET MEDICAL</div>
+              <div class="indent2">📁 CROPS</div>
+              <div class="indent2">📁 DOSSIERS PATIENTS</div>
+              <div class="indent2">📁 MODELES</div>
+              <div class="indent1">📁 DIAPORAMA DES SERVICES</div>
+              <div class="indent2">📁 DEROULEMENT DU SERVICE ACHAT</div>
+              <div class="indent2">📁 DEROULEMENT DU SERVICE COMMUNICATION</div>
+			  <div class="indent2">📁 DEROULEMENT DU SERVICE COMPTABILITE</div>
+			  <div class="indent2">📁 DEROULEMENT DU SERVICE GRH</div>
+              <div class="indent1">📁 SERVICE ACHAT</div>
+              <div class="indent2">📁 CATALOGUE FOURNISSEURS</div>
+              <div class="indent2">📁 OFFRES PROMOTIONNELLES</div>
             </div>
           </div>
           <div>
-            <p>Si l’on cherche la facture client de lunettes n° 2026-081, on doit suivre la logique :</p>
-            <div class="path-example">Au_Plaisir_des_Yeux › 01_CLIENTS › FACTURES › Facture_Client_Lunettes_2026-081.pdf</div>
+            <p>Si l’on cherche la facture client FA00002394 du 12-10-26, on doit suivre la logique :</p>
+            <div class="path-example">SERVICES APY › SERVICE VENTE › FACTURES DE VENTE › L'OUTDOOR J'ADORE › 2026 › 10-OCTOBRE › FA00002394.pdf</div>
             <div class="tip"><span>💡</span><div><strong>Le bon réflexe :</strong> se demander d’abord « à quelle grande famille appartient ce document ? », puis « quel sous-dossier décrit le mieux sa nature ? ».</div></div>
           </div>
         </div>
@@ -668,7 +671,7 @@ kbd{
         <h2>3. Les règles de classement numérique</h2>
         <ul>
           <li><strong>Un emplacement logique et unique :</strong> éviter de dupliquer le même document partout.</li>
-          <li><strong>Des noms de dossiers simples :</strong> CLIENTS, FOURNISSEURS, RH, COMMUNICATION…</li>
+          <li><strong>Des noms de dossiers simples :</strong> CABINET MEDICAL, SERVICE ACHAT, SERVICE VENTE…</li>
           <li><strong>Une structure stable :</strong> toute l’équipe doit utiliser la même logique.</li>
           <li><strong>Des droits d’accès adaptés :</strong> un contrat de travail ne doit pas être rangé avec les photos de communication.</li>
           <li><strong>Des archives séparées :</strong> les documents anciens restent retrouvables sans encombrer les dossiers actifs.</li>
@@ -728,7 +731,7 @@ kbd{
           </div>
           <div class="tree-panel">
             <div class="tree-title">
-              <h3>Arborescence de Au Plaisir des Yeux</h3>
+              <h3>Arborescence des SERVICES APY</h3>
               <button class="btn btn-secondary" onclick="resetTraining()">Recommencer</button>
             </div>
             <div class="tree-root" id="trainingTree"></div>
@@ -829,45 +832,41 @@ kbd{
 
 <script>
 const structure = [
-  {id:"clients-commandes", label:"COMMANDES", parent:"01_CLIENTS", level:2},
-  {id:"clients-factures", label:"FACTURES", parent:"01_CLIENTS", level:2},
-  {id:"clients-reclamations", label:"RECLAMATIONS", parent:"01_CLIENTS", level:2},
-  {id:"fournisseurs-devis", label:"DEVIS", parent:"02_FOURNISSEURS", level:2},
-  {id:"fournisseurs-factures", label:"FACTURES", parent:"02_FOURNISSEURS", level:2},
-  {id:"rh-contrats", label:"CONTRATS", parent:"03_RH", level:2},
-  {id:"rh-plannings", label:"PLANNINGS", parent:"03_RH", level:2},
-  {id:"com-images", label:"IMAGES", parent:"04_COMMUNICATION", level:2},
-  {id:"com-reseaux", label:"RESEAUX_SOCIAUX", parent:"04_COMMUNICATION", level:2},
-  {id:"admin-courriers", label:"COURRIERS", parent:"05_ADMINISTRATIF", level:2},
-  {id:"admin-procedures", label:"PROCEDURES", parent:"05_ADMINISTRATIF", level:2},
-  {id:"archives", label:"06_ARCHIVES", parent:null, level:1}
+  {id:"medical-dossiers",label:"DOSSIERS PATIENTS",parent:"CABINET MEDICAL",level:2},
+  {id:"medical-modeles",label:"MODELES",parent:"CABINET MEDICAL",level:2},
+  {id:"diapo-achat",label:"DEROULEMENT DU SERVICE ACHAT",parent:"DIAPORAMA DES SERVICES",level:2},
+  {id:"diapo-com",label:"DEROULEMENT DU SERVICE COMMUNICATION",parent:"DIAPORAMA DES SERVICES",level:2},
+  {id:"diapo-compta",label:"DEROULEMENT DU SERVICE COMPTABILITE",parent:"DIAPORAMA DES SERVICES",level:2},
+  {id:"diapo-grh",label:"DEROULEMENT DU SERVICE GRH",parent:"DIAPORAMA DES SERVICES",level:2},
+  {id:"achat-catalogue",label:"CATALOGUE FOURNISSEURS",parent:"SERVICE ACHAT",level:2},
+  {id:"achat-promos",label:"OFFRES PROMOTIONNELLES",parent:"SERVICE ACHAT",level:2},
+  {id:"vente-octobre",label:"10-OCTOBRE",parent:"SERVICE VENTE › FACTURES DE VENTE › L'OUTDOOR J'ADORE › 2026",level:2},
+  {id:"vente-septembre",label:"09-SEPTEMBRE",parent:"SERVICE VENTE › FACTURES DE VENTE › L'OUTDOOR J'ADORE › 2026",level:2}
 ];
-const parentOrder = ["01_CLIENTS","02_FOURNISSEURS","03_RH","04_COMMUNICATION","05_ADMINISTRATIF"];
-
+const parentOrder = ["CABINET MEDICAL","DIAPORAMA DES SERVICES","SERVICE ACHAT","SERVICE VENTE › FACTURES DE VENTE › L'OUTDOOR J'ADORE › 2026"];
 const trainingItems = [
-  {id:"t1",name:"Commande_CLI-104_Leroux_Monture.pdf",kind:"PDF",icon:"📄",target:"clients-commandes",why:"Une commande de lunettes ou de monture passée par un client appartient au dossier CLIENTS, sous-dossier COMMANDES."},
-  {id:"t2",name:"Facture_OptiFrance_4587.pdf",kind:"PDF",icon:"📄",target:"fournisseurs-factures",why:"OptiFrance est ici un fournisseur de montures : sa facture se range dans FOURNISSEURS › FACTURES."},
-  {id:"t3",name:"Planning_Accueil_Octobre.xlsx",kind:"Excel",icon:"📊",target:"rh-plannings",why:"Un planning du personnel relève des RH, sous-dossier PLANNINGS."},
-  {id:"t4",name:"Photo_Vitrine_Nouvelle_Collection.jpg",kind:"Image",icon:"🖼️",target:"com-images",why:"Une photo de vitrine ou de monture destinée à la communication se range dans COMMUNICATION › IMAGES."},
-  {id:"t5",name:"Procedure_Accueil_Client.pdf",kind:"PDF",icon:"📘",target:"admin-procedures",why:"Une procédure interne est un document administratif : ADMINISTRATIF › PROCEDURES."},
-  {id:"t6",name:"Dossier_Photos_Nouvelle_Collection_2026",kind:"Dossier",icon:"📁",target:"com-images",why:"Même si c’est un dossier, son contenu est un ensemble de photos de montures ou de vitrines : COMMUNICATION › IMAGES."}
+  {id:"t1",name:"FA00002394.pdf",kind:"Facture de vente du 12/10/2026",icon:"📄",target:"vente-octobre",why:"La facture FA00002394 du 12 octobre 2026 suit le chemin SERVICE VENTE › FACTURES DE VENTE › L'OUTDOOR J'ADORE › 2026 › 10-OCTOBRE."},
+  {id:"t2",name:"Catalogue_Fournisseur_Montures_2026.pdf",kind:"Catalogue PDF",icon:"📄",target:"achat-catalogue",why:"Le catalogue fournisseur appartient à SERVICE ACHAT › CATALOGUE FOURNISSEURS."},
+  {id:"t3",name:"Promotion_Montures_Automne.pdf",kind:"Offre commerciale",icon:"📄",target:"achat-promos",why:"L'offre promotionnelle est classée dans SERVICE ACHAT › OFFRES PROMOTIONNELLES."},
+  {id:"t4",name:"Diaporama_Service_Communication.pptx",kind:"Présentation",icon:"📊",target:"diapo-com",why:"Le diaporama explicatif du service communication va dans DIAPORAMA DES SERVICES › DEROULEMENT DU SERVICE COMMUNICATION."},
+  {id:"t5",name:"Modele_Fiche_Patient.docx",kind:"Modèle Word",icon:"📝",target:"medical-modeles",why:"Un modèle utilisé au cabinet médical va dans CABINET MEDICAL › MODELES."},
+  {id:"t6",name:"Dossier_Patient_Exemple.pdf",kind:"Dossier patient fictif",icon:"📁",target:"medical-dossiers",why:"Le dossier patient fictif va dans CABINET MEDICAL › DOSSIERS PATIENTS."}
 ];
-
 const examItems = [
-  {id:"e1",name:"Commande_CLI-103_Martin_Lunettes.pdf",kind:"PDF",icon:"📄",target:"clients-commandes"},
-  {id:"e2",name:"Facture_Client_Lunettes_2026-081.pdf",kind:"PDF",icon:"📄",target:"clients-factures"},
-  {id:"e3",name:"Reclamation_Dupont.eml",kind:"Courriel",icon:"✉️",target:"clients-reclamations"},
-  {id:"e4",name:"Devis_VisionPro_Septembre.xlsx",kind:"Excel",icon:"📊",target:"fournisseurs-devis"},
-  {id:"e5",name:"Facture_Fournisseur_OptiFrance_4591.pdf",kind:"PDF",icon:"📄",target:"fournisseurs-factures"},
-  {id:"e6",name:"Contrat_CDD_Emma_Roux.pdf",kind:"PDF",icon:"👤",target:"rh-contrats"},
-  {id:"e7",name:"Planning_Equipe_Magasin_S42.xlsx",kind:"Excel",icon:"📊",target:"rh-plannings"},
-  {id:"e8",name:"Photo_Monture_Vitrine_Automne.png",kind:"Image",icon:"🖼️",target:"com-images"},
-  {id:"e9",name:"Dossier_Photos_Montures_Nouvelle_Collection",kind:"Dossier",icon:"📁",target:"com-images"},
-  {id:"e10",name:"Post_Instagram_Nouvelle_Collection.docx",kind:"Word",icon:"📝",target:"com-reseaux"},
-  {id:"e11",name:"Courrier_Mairie_Chambery.docx",kind:"Word",icon:"📝",target:"admin-courriers"},
-  {id:"e12",name:"Procedure_Fermeture_Boutique.pdf",kind:"PDF",icon:"📘",target:"admin-procedures"},
-  {id:"e13",name:"Facture_Client_Lunettes_2024-019.pdf",kind:"PDF ancien",icon:"🗄️",target:"archives"},
-  {id:"e14",name:"Catalogue_Montures_2023.pdf",kind:"Document ancien",icon:"🗄️",target:"archives"}
+  {id:"e1",name:"FA00002394.pdf",kind:"Facture du 12/10/2026",icon:"📄",target:"vente-octobre"},
+  {id:"e2",name:"FA00002381.pdf",kind:"Facture du 15/09/2026",icon:"📄",target:"vente-septembre"},
+  {id:"e3",name:"Catalogue_Fournisseur_Verres.pdf",kind:"Catalogue",icon:"📄",target:"achat-catalogue"},
+  {id:"e4",name:"Catalogue_Fournisseur_Montures.pdf",kind:"Catalogue",icon:"📄",target:"achat-catalogue"},
+  {id:"e5",name:"Offre_Promotionnelle_Octobre.pdf",kind:"Promotion",icon:"📄",target:"achat-promos"},
+  {id:"e6",name:"Remise_Fournisseur_Automne.pdf",kind:"Promotion",icon:"📄",target:"achat-promos"},
+  {id:"e7",name:"Diaporama_Service_Achat.pptx",kind:"Présentation",icon:"📊",target:"diapo-achat"},
+  {id:"e8",name:"Diaporama_Service_Communication.pptx",kind:"Présentation",icon:"📊",target:"diapo-com"},
+  {id:"e9",name:"Diaporama_Service_Comptabilite.pptx",kind:"Présentation",icon:"📊",target:"diapo-compta"},
+  {id:"e10",name:"Diaporama_Service_GRH.pptx",kind:"Présentation",icon:"📊",target:"diapo-grh"},
+  {id:"e11",name:"Modele_Compte_Rendu_Consultation.docx",kind:"Modèle",icon:"📝",target:"medical-modeles"},
+  {id:"e12",name:"Modele_Fiche_Patient.docx",kind:"Modèle",icon:"📝",target:"medical-modeles"},
+  {id:"e13",name:"Dossier_Patient_Fictif_A.pdf",kind:"Dossier fictif",icon:"📄",target:"medical-dossiers"},
+  {id:"e14",name:"Dossier_Patient_Fictif_B.pdf",kind:"Dossier fictif",icon:"📄",target:"medical-dossiers"}
 ];
 
 let selectedTraining = null;
@@ -891,13 +890,13 @@ document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',(
 function pathLabel(id){
   const n = structure.find(x=>x.id===id);
   if(!n) return "Non classé";
-  if(n.parent) return `Au_Plaisir_des_Yeux › ${n.parent} › ${n.label}`;
-  return `Au_Plaisir_des_Yeux › ${n.label}`;
+  if(n.parent) return `SERVICES APY › ${n.parent} › ${n.label}`;
+  return `SERVICES APY › ${n.label}`;
 }
 
 function makeTree(containerId, mode){
   const c = document.getElementById(containerId);
-  c.innerHTML = '<div class="root-label">💻 Au_Plaisir_des_Yeux</div>';
+  c.innerHTML = '<div class="root-label">💻 SERVICES APY</div>';
   parentOrder.forEach(parent=>{
     const parentLine = document.createElement('div');
     parentLine.className='folder-node';
@@ -1061,7 +1060,7 @@ function updateTraining(){
   if(n===trainingItems.length){
     const fb=document.getElementById('trainingFeedback');
     fb.className='feedback show ok';
-    fb.innerHTML='🎉 Entraînement terminé ! Vous avez correctement classé les 6 éléments. Vous pouvez maintenant passer à l’épreuve chronométrée.';
+    fb.innerHTML='🎉 Entraînement terminé ! Vous avez correctement classé les 6 éléments de SERVICES APY. Vous pouvez maintenant passer à l’épreuve chronométrée.';
   }
 }
 
