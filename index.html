@@ -274,6 +274,21 @@ h3{margin:0 0 8px}
 .folder-name{font-weight:700;font-size:13px;overflow-wrap:anywhere}
 .folder-name.level-1{padding-left:18px}
 .folder-name.level-2{padding-left:42px}
+.folder-name.level-3{padding-left:66px}
+.folder-name.level-4{padding-left:90px}
+.folder-name.level-5{padding-left:114px}
+.folder-name.level-6{padding-left:138px}
+/* Traits légers pour visualiser la hiérarchie des sous-dossiers */
+.folder-name.level-2,.folder-name.level-3,.folder-name.level-4,
+.folder-name.level-5,.folder-name.level-6{position:relative}
+.folder-name.level-2::before,.folder-name.level-3::before,
+.folder-name.level-4::before,.folder-name.level-5::before,
+.folder-name.level-6::before{content:"└─";position:absolute;left:calc(18px + (var(--depth) - 2)*24px);color:#9DB1C0}
+.folder-name.level-2{--depth:2}
+.folder-name.level-3{--depth:3}
+.folder-name.level-4{--depth:4}
+.folder-name.level-5{--depth:5}
+.folder-name.level-6{--depth:6}
 .dropzone{
   min-height:34px;min-width:170px;
   border:1.5px dashed #A8C4D5;border-radius:9px;
@@ -901,13 +916,19 @@ function makeTree(containerId, mode){
   const c = document.getElementById(containerId);
   c.innerHTML = '<div class="root-label">💻 SERVICES APY</div>';
   parentOrder.forEach(parent=>{
-    const parentLine = document.createElement('div');
-    parentLine.className='folder-node';
-    parentLine.innerHTML=`<div class="folder-line"><div class="folder-name level-1">📁 ${parent}</div><div></div></div>`;
-    c.appendChild(parentLine);
+    // Un chemin avec › représente plusieurs niveaux de dossiers, pas un nom unique.
+    const folders = parent.split(' › ');
+    folders.forEach((folder,index)=>{
+      const parentLine = document.createElement('div');
+      parentLine.className='folder-node';
+      const level = index + 1;
+      parentLine.innerHTML=`<div class="folder-line"><div class="folder-name level-${level}">📁 ${folder}</div><div></div></div>`;
+      c.appendChild(parentLine);
+    });
 
+    // Les cibles restent les mêmes : seules leur profondeur et leur présentation changent.
     structure.filter(x=>x.parent===parent).forEach(n=>{
-      c.appendChild(makeFolderNode(n,mode));
+      c.appendChild(makeFolderNode({...n,level:folders.length+1},mode));
     });
   });
   structure.filter(x=>!x.parent).forEach(n=>c.appendChild(makeFolderNode(n,mode)));
