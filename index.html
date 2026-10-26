@@ -541,6 +541,33 @@ kbd{
 #course .path-example{font-size:19px;line-height:1.9;padding:28px 30px;min-height:160px;white-space:normal;overflow-wrap:anywhere;border:2px solid #244e68;box-shadow:0 10px 24px rgba(0,0,0,.14)}
 #course .lesson:nth-of-type(2) .course-grid{grid-template-columns:1fr 1.3fr}
 @media(max-width:1050px){#course .lesson:nth-of-type(2) .course-grid{grid-template-columns:1fr}}
+
+/* Correctif défilement : en-tête fixe et dossiers défilants, sans chevauchement */
+@media (min-width:781px){
+  #training .tree-panel,
+  #exam .exam-workspace .tree-panel{
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+    min-height:0;
+  }
+  #training .tree-title,
+  #exam .exam-workspace .tree-title{
+    position:relative;
+    top:auto;
+    flex-shrink:0;
+    z-index:2;
+    background:#fff;
+  }
+  #training .tree-root,
+  #exam .exam-workspace .tree-root{
+    flex:1 1 auto;
+    min-height:0;
+    overflow-y:auto;
+    overflow-x:hidden;
+    scrollbar-width:thin;
+  }
+}
 </style>
 </head>
 <body>
